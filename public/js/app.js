@@ -99391,19 +99391,16 @@ var Router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       component: function component() {
         return Promise.all(/*! import() */[__webpack_require__.e(4), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../pages/Admin/VideoPanel */ "./resources/js/App/pages/Admin/VideoPanel.vue"));
       }
-    }]
-    /*beforeEnter: ((to, from, next)=>{
-        api.checkUser()
-            .then((response)=>{
-                if(response.data.valid){
-                    next()
-                }
-                else{
-                    next('/')
-                }
-             })
-    })*/
-
+    }],
+    beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+      _Service_Api__WEBPACK_IMPORTED_MODULE_2__["default"].checkUser().then(function (response) {
+        if (response.data.valid) {
+          next();
+        } else {
+          next('/');
+        }
+      });
+    }
   }, {
     path: '/login',
     component: function component() {

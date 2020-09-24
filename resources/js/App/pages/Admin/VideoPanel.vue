@@ -1,47 +1,51 @@
 <template>
     <v-row>
-        <v-data-table
-            :items="Videos"
-            :headers="Headers"
-            class="elevation-1"
-            item-key="name"
+        <v-col
+        cols="12"
         >
-            <template v-slot:body="items">
-                <draggable
-                    tag="tbody"
-                    @end="onEnd"
-                >
-                    <tr
-                        class="sortable"
-                        v-for="(item, index) in Videos"
-                        :key="index"
+            <v-data-table
+                :items="Videos"
+                :headers="Headers"
+                class="elevation-1"
+                item-key="name"
+            >
+                <template v-slot:body="items">
+                    <draggable
+                        tag="tbody"
+                        @end="onEnd"
                     >
-                        <td> {{ item.videoTitle }}</td>
-                        <td> {{ item.videoDescription }}</td>
-                        <td> {{ item.videoLink }}</td>
-                        <td>
-                            <v-btn icon
-                                   color="red"
-                                   @click="deleteItem(item.id)"
-                            >
-                                <v-icon>mdi-delete</v-icon>
-                            </v-btn>
-                        </td>
-                        <td>
-                            <v-btn icon
-                                   color="green"
-                                   @click="editVideo(item)"
-                            >
-                                <v-icon>mdi-pencil-outline</v-icon>
-                            </v-btn>
-                        </td>
-                    </tr>
-                </draggable>
-            </template>
-        </v-data-table>
-        <response-dialog></response-dialog>
+                        <tr
+                            class="sortable"
+                            v-for="(item, index) in Videos"
+                            :key="index"
+                        >
+                            <td> {{ item.videoTitle }}</td>
+                            <td> {{ item.videoDescription }}</td>
+                            <td> {{ item.videoLink }}</td>
+                            <td>
+                                <v-btn icon
+                                       color="red"
+                                       @click="deleteItem(item.id)"
+                                >
+                                    <v-icon>mdi-delete</v-icon>
+                                </v-btn>
+                            </td>
+                            <td>
+                                <v-btn icon
+                                       color="green"
+                                       @click="editVideo(item)"
+                                >
+                                    <v-icon>mdi-pencil-outline</v-icon>
+                                </v-btn>
+                            </td>
+                        </tr>
+                    </draggable>
+                </template>
+            </v-data-table>
+            <response-dialog></response-dialog>
 
-        <edit-dialog></edit-dialog>
+            <edit-dialog></edit-dialog>
+        </v-col>
     </v-row>
 </template>
 
@@ -68,7 +72,8 @@ export default {
                 {text: 'Video link', value: 'videoLink', sortable: false},
                 {text: 'Delete', value: 'delete', sortable: false},
                 {text: 'Edit', value: 'edit', sortable: false},
-            ]
+            ],
+            dialog: false
         }
     },
     methods: {
@@ -94,7 +99,7 @@ export default {
                     this.$store.state.responseIcon = "mdi-thumb-up"
                 })
         },
-        editVideo(video){
+        editVideo(video) {
             this.$store.state.edit = !this.$store.state.edit
             this.$store.state.videoDescription = video.videoDescription
             this.$store.state.videoLink = video.videoLink

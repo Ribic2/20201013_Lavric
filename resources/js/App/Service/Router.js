@@ -38,7 +38,7 @@ const Router = new VueRouter({
                     component: ()=> import('../pages/Admin/VideoPanel')
                 },
             ],
-            /*beforeEnter: ((to, from, next)=>{
+            beforeRouteEnter: ((to, from, next)=>{
                 api.checkUser()
                     .then((response)=>{
                         if(response.data.valid){
@@ -49,7 +49,7 @@ const Router = new VueRouter({
                         }
 
                     })
-            })*/
+            })
         },
         {
             path: '/login',

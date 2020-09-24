@@ -98,6 +98,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -132,7 +136,8 @@ __webpack_require__.r(__webpack_exports__);
         text: 'Edit',
         value: 'edit',
         sortable: false
-      }]
+      }],
+      dialog: false
     };
   },
   methods: {
@@ -383,77 +388,96 @@ var render = function() {
   return _c(
     "v-row",
     [
-      _c("v-data-table", {
-        staticClass: "elevation-1",
-        attrs: { items: _vm.Videos, headers: _vm.Headers, "item-key": "name" },
-        scopedSlots: _vm._u([
-          {
-            key: "body",
-            fn: function(items) {
-              return [
-                _c(
-                  "draggable",
-                  { attrs: { tag: "tbody" }, on: { end: _vm.onEnd } },
-                  _vm._l(_vm.Videos, function(item, index) {
-                    return _c("tr", { key: index, staticClass: "sortable" }, [
-                      _c("td", [_vm._v(" " + _vm._s(item.videoTitle))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(" " + _vm._s(item.videoDescription))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(" " + _vm._s(item.videoLink))]),
-                      _vm._v(" "),
-                      _c(
-                        "td",
-                        [
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: { icon: "", color: "red" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.deleteItem(item.id)
-                                }
-                              }
-                            },
-                            [_c("v-icon", [_vm._v("mdi-delete")])],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "td",
-                        [
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: { icon: "", color: "green" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.editVideo(item)
-                                }
-                              }
-                            },
-                            [_c("v-icon", [_vm._v("mdi-pencil-outline")])],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ])
-                  }),
-                  0
-                )
-              ]
-            }
-          }
-        ])
-      }),
-      _vm._v(" "),
-      _c("response-dialog"),
-      _vm._v(" "),
-      _c("edit-dialog")
+      _c(
+        "v-col",
+        { attrs: { cols: "12" } },
+        [
+          _c("v-data-table", {
+            staticClass: "elevation-1",
+            attrs: {
+              items: _vm.Videos,
+              headers: _vm.Headers,
+              "item-key": "name"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "body",
+                fn: function(items) {
+                  return [
+                    _c(
+                      "draggable",
+                      { attrs: { tag: "tbody" }, on: { end: _vm.onEnd } },
+                      _vm._l(_vm.Videos, function(item, index) {
+                        return _c(
+                          "tr",
+                          { key: index, staticClass: "sortable" },
+                          [
+                            _c("td", [_vm._v(" " + _vm._s(item.videoTitle))]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _vm._v(" " + _vm._s(item.videoDescription))
+                            ]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(" " + _vm._s(item.videoLink))]),
+                            _vm._v(" "),
+                            _c(
+                              "td",
+                              [
+                                _c(
+                                  "v-btn",
+                                  {
+                                    attrs: { icon: "", color: "red" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.deleteItem(item.id)
+                                      }
+                                    }
+                                  },
+                                  [_c("v-icon", [_vm._v("mdi-delete")])],
+                                  1
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "td",
+                              [
+                                _c(
+                                  "v-btn",
+                                  {
+                                    attrs: { icon: "", color: "green" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.editVideo(item)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("v-icon", [_vm._v("mdi-pencil-outline")])
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("response-dialog"),
+          _vm._v(" "),
+          _c("edit-dialog")
+        ],
+        1
+      )
     ],
     1
   )
@@ -661,9 +685,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/index.js");
-/* harmony import */ var vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VDataTable */ "./node_modules/vuetify/lib/components/VDataTable/index.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/index.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
+/* harmony import */ var vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VDataTable */ "./node_modules/vuetify/lib/components/VDataTable/index.js");
+/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/index.js");
 
 
 
@@ -689,7 +713,8 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VDataTable: vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_6__["VDataTable"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_7__["VIcon"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["VRow"]})
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["VCol"],VDataTable: vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_7__["VDataTable"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__["VIcon"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["VRow"]})
 
 
 /* hot reload */

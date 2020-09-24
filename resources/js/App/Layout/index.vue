@@ -26,8 +26,10 @@
                 color="white"
                 :elevation="0"
             >
-                <v-toolbar-title>
-                    <span class="font-weight-medium">NIK LAVRIČ</span> editor colorist
+                <v-toolbar-title
+                @click="redirect()"
+                >
+                    <span id="title" class="font-weight-bold">NIK LAVRIČ</span> editor colorist
                 </v-toolbar-title>
 
                 <v-spacer></v-spacer>
@@ -71,6 +73,11 @@ export default {
                 {index: 1, text: 'ABOUT', link: '/about'},
                 {index: 2, text: 'CONTACT', link: '/contact'}
             ]
+        }
+    },
+    methods:{
+        redirect(){
+            window.location.href = "/"
         }
     }
 }

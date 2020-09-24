@@ -9,8 +9,13 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn icon>
-                <v-icon>mdi-logout</v-icon>
+            <v-btn
+                color="cyan"
+                :elevation="0"
+                :ripple="false"
+                @click="logout()"
+                >
+                <v-icon left>mdi-logout</v-icon>Logout
             </v-btn>
 
         </v-app-bar>
@@ -26,10 +31,10 @@
 <script>
 export default {
     name: "admin.vue",
-
-    data() {
-        return {
-
+    methods:{
+        logout(){
+            localStorage.clear();
+            this.$router.push('/')
         }
     }
 }

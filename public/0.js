@@ -71,6 +71,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index.vue",
   data: function data() {
@@ -90,6 +92,11 @@ __webpack_require__.r(__webpack_exports__);
         link: '/contact'
       }]
     };
+  },
+  methods: {
+    redirect: function redirect() {
+      window.location.href = "/";
+    }
   }
 });
 
@@ -208,12 +215,24 @@ var render = function() {
             "v-app-bar",
             { attrs: { color: "white", elevation: 0 } },
             [
-              _c("v-toolbar-title", [
-                _c("span", { staticClass: "font-weight-medium" }, [
-                  _vm._v("NIK LAVRIČ")
-                ]),
-                _vm._v(" editor colorist\n            ")
-              ]),
+              _c(
+                "v-toolbar-title",
+                {
+                  on: {
+                    click: function($event) {
+                      return _vm.redirect()
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "span",
+                    { staticClass: "font-weight-bold", attrs: { id: "title" } },
+                    [_vm._v("NIK LAVRIČ")]
+                  ),
+                  _vm._v(" editor colorist\n            ")
+                ]
+              ),
               _vm._v(" "),
               _c("v-spacer"),
               _vm._v(" "),

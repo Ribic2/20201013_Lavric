@@ -34,10 +34,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "admin.vue",
-  data: function data() {
-    return {};
+  methods: {
+    logout: function logout() {
+      localStorage.clear();
+      this.$router.push('/');
+    }
   }
 });
 
@@ -71,8 +79,18 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-btn",
-            { attrs: { icon: "" } },
-            [_c("v-icon", [_vm._v("mdi-logout")])],
+            {
+              attrs: { color: "cyan", elevation: 0, ripple: false },
+              on: {
+                click: function($event) {
+                  return _vm.logout()
+                }
+              }
+            },
+            [
+              _c("v-icon", { attrs: { left: "" } }, [_vm._v("mdi-logout")]),
+              _vm._v("Logout\n        ")
+            ],
             1
           )
         ],
