@@ -79,7 +79,7 @@ export default {
             api.login(this.username, this.password)
             .then((response)=>{
                 localStorage.setItem('authToken', response.data.token)
-                console.log(response.data.token)
+                this.$router.push('/admin')
             })
             .catch((err)=>{
                 console.log(err.response)

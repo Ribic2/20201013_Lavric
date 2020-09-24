@@ -6,41 +6,66 @@
             class="elevation-1"
             item-key="name"
         >
-            <template v-slot:item.delete="{ item }">
-                <v-btn
-                    icon
-                    color="error"
+            <template v-slot:body="items">
+                <draggable
+                    tag="tbody"
+                    @end="onEnd"
                 >
-                    <v-icon>mdi-delete</v-icon>
-                </v-btn>
-            </template>
-
-            <template v-slot:item.edit="{ item }">
-                <v-btn
-                    icon
-                    color="green"
-                >
-                    <v-icon>mdi-circle-edit-outline</v-icon>
-                </v-btn>
+                    <tr
+                        class="sortable"
+                        v-for="(item, index) in Videos"
+                        :key="index"
+                    >
+                        <td> {{ item.videoTitle }}</td>
+                        <td> {{ item.videoDescription }}</td>
+                        <td> {{ item.videoLink }}</td>
+                        <td>
+                            <v-btn icon
+                                   color="red"
+                                   @click="deleteItem(item.id)"
+                            >
+                                <v-icon>mdi-delete</v-icon>
+                            </v-btn>
+                        </td>
+                        <td>
+                            <v-btn icon
+                                   color="green"
+                                   @click="editVideo(item)"
+                            >
+                                <v-icon>mdi-pencil-outline</v-icon>
+                            </v-btn>
+                        </td>
+                    </tr>
+                </draggable>
             </template>
         </v-data-table>
+        <response-dialog></response-dialog>
+
+        <edit-dialog></edit-dialog>
     </v-row>
 </template>
 
 <script>
 
 import api from '../../Service/Api'
+import draggable from 'vuedraggable'
+import responseDialog from "../../Components/responseDialog";
+import editDialog from "./editDialog";
 
 export default {
+    components: {
+        draggable,
+        responseDialog,
+        editDialog
+    },
     name: "VideoPanel.vue",
     data() {
         return {
             Videos: [],
             Headers: [
-                {text: 'Id', value: 'id'},
-                {text: 'VideoTitle', value: 'videoTitle'},
-                {text: 'Video description', value: 'videoDescription'},
-                {text: 'Video link', value: 'videoLink'},
+                {text: 'VideoTitle', value: 'videoTitle', sortable: false},
+                {text: 'Video description', value: 'videoDescription', sortable: false},
+                {text: 'Video link', value: 'videoLink', sortable: false},
                 {text: 'Delete', value: 'delete', sortable: false},
                 {text: 'Edit', value: 'edit', sortable: false},
             ]
@@ -52,6 +77,28 @@ export default {
                 .then((response) => {
                     this.Videos = response.data.response
                 })
+        },
+        onEnd: function (evt) {
+            let oldIndex = evt.oldIndex + 1
+            let newIndex = evt.newIndex + 1
+
+            api.changeVideoSequence(oldIndex, newIndex)
+        },
+        deleteItem(id) {
+            api.deleteVideo(id)
+                .then((response) => {
+                    this.getVideos()
+                    this.$store.state.response = true
+                    this.$store.state.responseColor = "green"
+                    this.$store.state.responseText = response.data.Response
+                    this.$store.state.responseIcon = "mdi-thumb-up"
+                })
+        },
+        editVideo(video){
+            this.$store.state.edit = !this.$store.state.edit
+            this.$store.state.videoDescription = video.videoDescription
+            this.$store.state.videoLink = video.videoLink
+            this.$store.state.videoTitle = video.videoTitle
         }
     },
     mounted() {
@@ -61,5 +108,7 @@ export default {
 </script>
 
 <style scoped>
-
+.sortable-drag {
+    opacity: 0;
+}
 </style>

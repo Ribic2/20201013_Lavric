@@ -85,9 +85,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     login: function login() {
+      var _this = this;
+
       _Service_Api_js__WEBPACK_IMPORTED_MODULE_0__["default"].login(this.username, this.password).then(function (response) {
         localStorage.setItem('authToken', response.data.token);
-        console.log(response.data.token);
+
+        _this.$router.push('/admin');
       })["catch"](function (err) {
         console.log(err.response);
       });

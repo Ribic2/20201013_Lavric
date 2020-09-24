@@ -34,31 +34,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "admin.vue",
   data: function data() {
-    return {
-      items: [{
-        text: 'Edit',
-        to: '/admin'
-      }, {
-        text: 'Sequence',
-        to: '/admin/sequence'
-      }]
-    };
+    return {};
   }
 });
 
@@ -84,41 +63,7 @@ var render = function() {
     [
       _c(
         "v-app-bar",
-        {
-          attrs: { color: "cyan", dark: "", app: "" },
-          scopedSlots: _vm._u([
-            {
-              key: "extension",
-              fn: function() {
-                return [
-                  _c(
-                    "v-tabs",
-                    { attrs: { "align-with-title": "" } },
-                    [
-                      _c("v-tabs-slider", { attrs: { color: "yellow" } }),
-                      _vm._v(" "),
-                      _vm._l(_vm.items, function(item) {
-                        return _c(
-                          "v-tab",
-                          { key: item, attrs: { to: item.to } },
-                          [
-                            _vm._v(
-                              "\n                    " +
-                                _vm._s(item.text) +
-                                "\n                "
-                            )
-                          ]
-                        )
-                      })
-                    ],
-                    2
-                  )
-                ]
-              },
-              proxy: true
-            }
-          ])
-        },
+        { attrs: { color: "cyan", dark: "", app: "" } },
         [
           _c("v-toolbar-title", [_vm._v("Dashboard")]),
           _vm._v(" "),
@@ -196,8 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
 /* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/index.js");
 /* harmony import */ var vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VMain */ "./node_modules/vuetify/lib/components/VMain/index.js");
-/* harmony import */ var vuetify_lib_components_VTabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VTabs */ "./node_modules/vuetify/lib/components/VTabs/index.js");
-/* harmony import */ var vuetify_lib_components_VToolbar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VToolbar */ "./node_modules/vuetify/lib/components/VToolbar/index.js");
+/* harmony import */ var vuetify_lib_components_VToolbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VToolbar */ "./node_modules/vuetify/lib/components/VToolbar/index.js");
 
 
 
@@ -226,10 +170,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VAppBar: vuetify_lib_components_VAppBar__WEBPACK_IMPORTED_MODULE_5__["VAppBar"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_6__["VBtn"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VContainer"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__["VIcon"],VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_9__["VMain"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VSpacer"],VTab: vuetify_lib_components_VTabs__WEBPACK_IMPORTED_MODULE_10__["VTab"],VTabs: vuetify_lib_components_VTabs__WEBPACK_IMPORTED_MODULE_10__["VTabs"],VTabsSlider: vuetify_lib_components_VTabs__WEBPACK_IMPORTED_MODULE_10__["VTabsSlider"],VToolbarTitle: vuetify_lib_components_VToolbar__WEBPACK_IMPORTED_MODULE_11__["VToolbarTitle"]})
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VAppBar: vuetify_lib_components_VAppBar__WEBPACK_IMPORTED_MODULE_5__["VAppBar"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_6__["VBtn"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VContainer"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__["VIcon"],VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_9__["VMain"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VSpacer"],VToolbarTitle: vuetify_lib_components_VToolbar__WEBPACK_IMPORTED_MODULE_10__["VToolbarTitle"]})
 
 
 /* hot reload */

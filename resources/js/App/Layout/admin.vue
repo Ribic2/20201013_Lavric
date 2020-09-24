@@ -13,19 +13,6 @@
                 <v-icon>mdi-logout</v-icon>
             </v-btn>
 
-            <template v-slot:extension>
-                <v-tabs
-                    align-with-title
-                >
-                    <v-tabs-slider color="yellow"></v-tabs-slider>
-
-                    <v-tab v-for="item in items"
-                           :to="item.to"
-                           :key="item">
-                        {{ item.text }}
-                    </v-tab>
-                </v-tabs>
-            </template>
         </v-app-bar>
 
         <v-main>
@@ -42,14 +29,7 @@ export default {
 
     data() {
         return {
-            items: [
-                {
-                    text: 'Edit', to: '/admin'
-                },
-                {
-                    text: 'Sequence', to: '/admin/sequence'
-                }
-            ],
+
         }
     }
 }

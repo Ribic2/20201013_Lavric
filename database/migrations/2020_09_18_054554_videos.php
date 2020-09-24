@@ -20,7 +20,8 @@ class Videos extends Migration
             $table->string('videoLink');
             $table->string('videoThumbnail');
             $table->string('videoApiTitle');
-            $table->integer('sequence');
+            $table->integer('orderSequence');
+            $table->timestamps();
         });
     }
 

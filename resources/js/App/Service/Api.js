@@ -58,6 +58,10 @@ export default {
      */
     checkUser(){
         return instance.post('/api/user/check')
+    },
+
+    changeVideoSequence(oldIndex, newIndex){
+        return instance.post('/api/videos/'+oldIndex+'/to/'+newIndex)
     }
 
 }

@@ -37,10 +37,6 @@ const Router = new VueRouter({
                     path: '',
                     component: ()=> import('../pages/Admin/VideoPanel')
                 },
-                {
-                    path: 'sequence',
-                    component: ()=> import('../pages/Admin/Sequence')
-                }
             ],
             /*beforeEnter: ((to, from, next)=>{
                 api.checkUser()

@@ -23,7 +23,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/rtiYy29ueTo?list=PLyEfQXlqMsZCqtJE0O1ud2QXb3DugfRQi',
                 'videoThumbnail' => 'ford_01.jpg',
                 'videoApiTitle' => 'ford-slovenija-slovenija-winter-campaign-2020',
-                'sequence' => 1
+                'orderSequence' => 1
             ],
             [
                 'id' => 2,
@@ -36,7 +36,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/ijouZo-HLu4',
                 'videoThumbnail' => 'ozs_50.jpg',
                 'videoApiTitle' => 'obrtna-zbornica-50-let',
-                'sequence' => 2
+                'orderSequence' => 2
             ],
             [
                 'id' => 3,
@@ -47,7 +47,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/cNY5PlmdNrc',
                 'videoThumbnail' => 'pirnar_01.jpg',
                 'videoApiTitle' => 'pirnar-contemporary-doors',
-                'sequence' => 3
+                'orderSequence' => 3
             ],
             [
                 'id' => 4,
@@ -60,7 +60,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/xs9sv5HjXHc',
                 'videoThumbnail' => 'lidl_01.jpg',
                 'videoApiTitle' => 'lidl-otvoritev-logističnega-centra-arja-vas',
-                'sequence' => 4
+                'orderSequence' => 4
             ],
             [
                 'id' => 5,
@@ -72,7 +72,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/uO6qysJpWWM',
                 'videoThumbnail' => 'ec19.jpg',
                 'videoApiTitle' => 'epicenter-19',
-                'sequence' => 5
+                'orderSequence' => 5
             ],
             [
                 'id' => 6,
@@ -84,7 +84,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/Zn03APUwTiA',
                 'videoThumbnail' => 'ec20_02.jpg',
                 'videoApiTitle' => 'epicenter-20',
-                'sequence' => 6
+                'orderSequence' => 6
             ],
             [
                 'id' => 7,
@@ -97,7 +97,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/lnO1jbqcWto',
                 'videoThumbnail' => 'mc_01.jpg',
                 'videoApiTitle' => 'mastercard-sonic-brand',
-                'sequence' => 7
+                'orderSequence' => 7
             ],
             [
                 'id' => 8,
@@ -111,7 +111,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/ims8JARsIXs',
                 'videoThumbnail' => 'janplestenjak_01.jpg',
                 'videoApiTitle' => 'jan-plestenjak-kvatropirci-&-coto-res-je-dober-dan',
-                'sequence' => 8
+                'orderSequence' => 8
             ],
             [
                 'id' => 9,
@@ -129,7 +129,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/LctgiId2-VU',
                 'videoThumbnail' => 'hvalafanta_01.jpg',
                 'videoApiTitle' => 'hvala-fanta',
-                'sequence' => 9
+                'orderSequence' => 9
             ],
             [
                 'id' => 10,
@@ -142,7 +142,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/Ba1PVhtRbb4',
                 'videoThumbnail' => 'bartog_01.jpg',
                 'videoApiTitle' => 'bartog-logistic-center',
-                'sequence' => 10
+                'orderSequence' => 10
             ],
             [
                 'id' => 11,
@@ -160,7 +160,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/ylTMJE3o_ic',
                 'videoThumbnail' => 'petrol_01.jpg',
                 'videoApiTitle' => 'petrol-iam',
-                'sequence' => 11
+                'orderSequence' => 11
             ],
             [
                 'id' => 12,
@@ -172,7 +172,7 @@ class VideoSeeder extends Seeder
                 'videoLink' => 'https://www.youtube.com/embed/xppDlPI6glc',
                 'videoThumbnail' => 'cosylab_01.jpg',
                 'videoApiTitle' => 'cosylab-radiotherapy-products-suite',
-                'sequence' => 12
+                'orderSequence' => 12
             ],
         ]);
     }
