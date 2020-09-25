@@ -9,6 +9,43 @@
                 class="elevation-1"
                 item-key="name"
             >
+            <template v-slot:top>
+                <v-toolbar flat color="white">
+                    <v-toolbar-title>Video panel</v-toolbar-title>
+                    <v-divider
+                    class="mx-4"
+                    inset
+                    vertical
+                    ></v-divider>
+                    <v-spacer></v-spacer>
+                    <v-dialog v-model="dialog" max-width="500px">
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn
+                        color="primary"
+                        dark
+                        class="mb-2"
+                        v-bind="attrs"
+                        v-on="on"
+                        >New Item</v-btn>
+                    </template>
+                    <v-card>
+                        <v-card-title>
+                        <span class="headline">{{ formTitle }}</span>
+                        </v-card-title>
+
+                        <v-card-text>
+                            <h1>test</h1>
+                        </v-card-text>
+
+                        <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
+                        <v-btn color="blue darken-1" text @click="save">Save</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                    </v-dialog>
+                </v-toolbar>
+                </template>
                 <template v-slot:body="items">
                     <draggable
                         tag="tbody"
@@ -104,6 +141,7 @@ export default {
             this.$store.state.videoDescription = video.videoDescription
             this.$store.state.videoLink = video.videoLink
             this.$store.state.videoTitle = video.videoTitle
+            this.$store.state.videoId = video.id
         }
     },
     mounted() {

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Video;
-use http\Env\Request;
+use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
 class VideoController extends Controller
@@ -79,7 +79,7 @@ class VideoController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function updateVideo(Request  $request): JsonResponse
+    public function updateVideo(Request  $request, int $id): JsonResponse
     {
 
         $videoTitle = $request->input('videoTitle');
@@ -92,7 +92,7 @@ class VideoController extends Controller
             ]);
         }
 
-        Video::create([
+        Video::where('id', $id)->update([
             "videoTitle" => $videoTitle,
             "videoDescription" => $videoDescription,
             "videoLink" => $videoLink

@@ -38,8 +38,12 @@ export default {
      * Modifys video data
      * @param {number} id
      */
-    modifyVideo(id){
-        return instance.patch('/api/videos/'+id)
+    modifyVideo(id, videoTitle, videoDescription, videoLink){
+        return instance.patch('/api/videos/'+id, {
+            videoTitle: videoTitle,
+            videoDescription: videoDescription,
+            videoLink: videoLink
+        })
     },
 
     /**

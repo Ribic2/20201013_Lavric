@@ -10,22 +10,23 @@
                 class="pa-5"
             >
                 <v-text-field
+                    :return-value.sync="this.$store.state.videoTitle"
                     label="Video title"
-                    :value="this.$store.state.videoTitle"
+                    v-model="test"
                 >
                 </v-text-field>
 
                 <v-textarea
                     no-resize
+                    v-model="this.$store.state.videoDescription"
+                    @keydown.enter="addNewLine()"
                     label="Video description"
-                    :value="this.$store.state.videoDescription"
                 >
                 </v-textarea>
 
                 <v-text-field
                     label="Video link"
-                    v-model="videoTitle"
-                    :value="this.$store.state.videoLink"
+                    v-model="this.$store.state.videoLink"
                 >
                 </v-text-field>
 
@@ -43,19 +44,32 @@
 </template>
 
 <script>
+import Api from '../../Service/Api'
 export default {
     name: "editDialog.vue",
     data(){
         return{
-            videoLink: '',
-            videoDescription: '',
-            videoTitle: ''
+            test: '',
+            videoLink: this.$store.state.videoLink,
+            videoDescription: this.$store.state.videoDescription,
+            videoTitle: this.$store.state.videoTitle
         }
     },
     methods:{
         updateVideo(){
-            console.log(this.videoLink)
-        }
+            console.log(this.$store.state.videoTitle)
+            Api.modifyVideo(
+               this.$store.state.videoId,
+               this.$store.state.videoTitle,
+               this.$store.state.videoDescription,
+               this.$store.state.videoLink
+            )
+            .then((response)=>{
+                console.log(response)
+            })
+
+
+        },
     }
 }
 </script>

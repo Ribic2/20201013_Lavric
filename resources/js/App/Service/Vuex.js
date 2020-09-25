@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import api from './Api'
 
 Vue.use(Vuex)
 
@@ -16,6 +15,7 @@ export default new Vuex.Store({
         videoTitle: '',
         videoDescription: '',
         videoLink: '',
+        videoId: ''
 
     },
     mutations:{
