@@ -114,7 +114,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n*[data-v-5e4b43ce] {\r\n    font-family: 'Open Sans', sans-serif;\n}\n.container[data-v-5e4b43ce] {\r\n    width: 60vw;\n}\n@media only screen and (max-width: 565px) {\n.container[data-v-5e4b43ce] {\r\n        width: auto;\n}\n#main[data-v-5e4b43ce]{\r\n        width: 100vw;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n*[data-v-5e4b43ce] {\n    font-family: 'Open Sans', sans-serif;\n}\n.container[data-v-5e4b43ce] {\n    width: 60vw;\n}\n@media only screen and (max-width: 565px) {\n.container[data-v-5e4b43ce] {\n        width: auto;\n}\n#main[data-v-5e4b43ce]{\n        width: 100vw;\n}\n}\n", ""]);
 
 // exports
 

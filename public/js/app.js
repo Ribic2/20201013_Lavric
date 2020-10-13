@@ -99333,8 +99333,21 @@ var instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
   checkUser: function checkUser() {
     return instance.post('/api/user/check');
   },
+
+  /**
+   * @param oldIndex
+   * @param newIndex
+   * @returns {Promise<AxiosResponse<any>>}
+   */
   changeVideoSequence: function changeVideoSequence(oldIndex, newIndex) {
     return instance.post('/api/videos/' + oldIndex + '/to/' + newIndex);
+  },
+
+  /**
+   * Uploads new video
+   */
+  addVideo: function addVideo(data) {
+    return instance.post('/api/videos', data);
   }
 });
 
@@ -99396,8 +99409,10 @@ var Router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
         return Promise.all(/*! import() */[__webpack_require__.e(9), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! ../pages/Admin/VideoPanel */ "./resources/js/App/pages/Admin/VideoPanel.vue"));
       }
     }],
-    beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    beforeEnter: function beforeEnter(to, from, next) {
       _Service_Api__WEBPACK_IMPORTED_MODULE_2__["default"].checkUser().then(function (response) {
+        console.log(response.data);
+
         if (response.data.valid) {
           next();
         } else {
@@ -99455,16 +99470,15 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     responseColor: '',
     responseIcon: '',
     responseText: '',
-    response: '',
-    // Edit dialog
-    edit: false,
-    videoTitle: '',
-    videoDescription: '',
-    videoLink: '',
-    videoId: ''
+    response: ''
   },
   mutations: {},
-  actions: {}
+  actions: {},
+  getters: {
+    videoTitle: function videoTitle(state) {
+      return state.videoLink;
+    }
+  }
 }));
 
 /***/ }),
@@ -99564,8 +99578,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\urhbu\Documents\projekti\test\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\urhbu\Documents\projekti\test\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/vid/Desktop/test_ena/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/vid/Desktop/test_ena/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

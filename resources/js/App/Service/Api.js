@@ -64,8 +64,20 @@ export default {
         return instance.post('/api/user/check')
     },
 
+    /**
+     * @param oldIndex
+     * @param newIndex
+     * @returns {Promise<AxiosResponse<any>>}
+     */
     changeVideoSequence(oldIndex, newIndex){
         return instance.post('/api/videos/'+oldIndex+'/to/'+newIndex)
+    },
+
+    /**
+     * Uploads new video
+     */
+    addVideo(data){
+        return instance.post('/api/videos', data)
     }
 
 }

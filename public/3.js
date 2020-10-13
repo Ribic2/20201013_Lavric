@@ -89,6 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 
       _Service_Api_js__WEBPACK_IMPORTED_MODULE_0__["default"].login(this.username, this.password).then(function (response) {
         localStorage.setItem('authToken', response.data.token);
+        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
 
         _this.$router.push('/admin');
       })["catch"](function (err) {

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Psy\Util\Json;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 class UserController extends Controller

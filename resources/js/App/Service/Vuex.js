@@ -9,19 +9,16 @@ export default new Vuex.Store({
         responseIcon: '',
         responseText: '',
         response: '',
-
-        // Edit dialog
-        edit: false,
-        videoTitle: '',
-        videoDescription: '',
-        videoLink: '',
-        videoId: ''
-
     },
     mutations:{
 
     },
     actions:{
 
+    },
+    getters:{
+        videoTitle: state=>{
+            return state.videoLink
+        }
     }
 })

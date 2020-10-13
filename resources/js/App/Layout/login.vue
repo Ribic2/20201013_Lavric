@@ -79,6 +79,7 @@ export default {
             api.login(this.username, this.password)
             .then((response)=>{
                 localStorage.setItem('authToken', response.data.token)
+                axios.defaults.headers.common["Authorization"] = `Bearer `+ response.data.token
                 this.$router.push('/admin')
             })
             .catch((err)=>{
