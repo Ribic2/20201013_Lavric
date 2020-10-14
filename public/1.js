@@ -73,6 +73,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index.vue",
   data: function data() {
@@ -114,7 +118,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n*[data-v-5e4b43ce] {\n    font-family: 'Open Sans', sans-serif;\n}\n.container[data-v-5e4b43ce] {\n    width: 60vw;\n}\n@media only screen and (max-width: 565px) {\n.container[data-v-5e4b43ce] {\n        width: auto;\n}\n#main[data-v-5e4b43ce]{\n        width: 100vw;\n}\n}\n", ""]);
+exports.push([module.i, "\n*[data-v-5e4b43ce] {\n    font-family: 'Open Sans', sans-serif;\n}\n.container[data-v-5e4b43ce] {\n    width: 55vw;\n}\n@media only screen and (max-width: 565px) {\n.container[data-v-5e4b43ce] {\n        width: auto;\n}\n#main[data-v-5e4b43ce] {\n        width: 100vw;\n}\n}\n", ""]);
 
 // exports
 
@@ -209,7 +213,10 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-container",
-        { attrs: { fluid: _vm.$vuetify.breakpoint.mobile ? true : false } },
+        {
+          class: _vm.$vuetify.breakpoint.mobile ? "" : "mt-10",
+          attrs: { fluid: _vm.$vuetify.breakpoint.mobile ? true : false }
+        },
         [
           _c(
             "v-app-bar",

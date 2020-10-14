@@ -19,10 +19,9 @@ class UserController extends Controller
     /**
      * Logs in user if provided credentials are correct
      * @param Request $request
-     * @return JsonResponse
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
-    public function login(Request $request): JsonResponse
+    public function login(Request $request)
     {
         // Login throttling, if user provides non-valid credentials he is blocked
         // from making attempts to login for 1 min
@@ -43,7 +42,6 @@ class UserController extends Controller
             return new JsonResponse([
                 "token" => $token,
             ]);
-
         }
     }
 

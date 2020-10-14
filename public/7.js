@@ -57,6 +57,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -139,6 +140,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-row",
+    { staticClass: "mt-4", attrs: { "no-gutters": "" } },
     [
       _c(
         "v-overlay",
@@ -156,6 +158,7 @@ var render = function() {
           "v-col",
           {
             key: video.id,
+            staticClass: "pa-2",
             attrs: { cols: "12", sm: "12", lg: "6", md: "6", xl: "4" }
           },
           [
@@ -183,7 +186,7 @@ var render = function() {
               [
                 _c(
                   "v-responsive",
-                  { attrs: { "aspect-ratio": 1 / 1 } },
+                  { attrs: { "aspect-ratio": 6 / 4 } },
                   [
                     _c(
                       "v-card-text",
@@ -191,7 +194,7 @@ var render = function() {
                       [
                         video.id == _vm.selected
                           ? _c("v-overlay", { attrs: { absolute: "" } }, [
-                              _c("h2", { staticClass: "pa-1" }, [
+                              _c("h2", { staticClass: "pa-5" }, [
                                 _vm._v(_vm._s(video.videoTitle))
                               ])
                             ])

@@ -99271,7 +99271,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
   headers: {
-    'Authorization': "Bearer " + localStorage.getItem('authToken')
+    'Authorization': "Bearer ".concat(localStorage.getItem('authToken'))
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -99385,23 +99385,23 @@ var Router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     }, {
       path: '/contact',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../pages/Contact/index */ "./resources/js/App/pages/Contact/index.vue"));
+        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../pages/Contact/index */ "./resources/js/App/pages/Contact/index.vue"));
       }
     }, {
       path: '/about',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../pages/About/index */ "./resources/js/App/pages/About/index.vue"));
+        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../pages/About/index */ "./resources/js/App/pages/About/index.vue"));
       }
     }, {
       path: '/video/:id',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../pages/Video/Display */ "./resources/js/App/pages/Video/Display.vue"));
+        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../pages/Video/Display */ "./resources/js/App/pages/Video/Display.vue"));
       }
     }]
   }, {
     path: '/admin',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../Layout/admin */ "./resources/js/App/Layout/admin.vue"));
+      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../Layout/admin */ "./resources/js/App/Layout/admin.vue"));
     },
     children: [{
       path: '',
@@ -99423,7 +99423,7 @@ var Router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }, {
     path: '/login',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../Layout/login */ "./resources/js/App/Layout/login.vue"));
+      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../Layout/login */ "./resources/js/App/Layout/login.vue"));
     }
   }]
 });

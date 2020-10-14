@@ -18,16 +18,20 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
+
         </v-navigation-drawer>
 
         <!-- App -->
-        <v-container :fluid="$vuetify.breakpoint.mobile ? true : false">
+        <v-container
+            :fluid="$vuetify.breakpoint.mobile ? true : false"
+            :class="$vuetify.breakpoint.mobile ? '' : 'mt-10'"
+        >
             <v-app-bar
                 color="white"
                 :elevation="0"
             >
                 <v-toolbar-title
-                @click="redirect()"
+                    @click="redirect()"
                 >
                     <span id="title" class="font-weight-bold">NIK LAVRIČ</span> editor colorist
                 </v-toolbar-title>
@@ -75,8 +79,8 @@ export default {
             ]
         }
     },
-    methods:{
-        redirect(){
+    methods: {
+        redirect() {
             window.location.href = "/"
         }
     }
@@ -89,14 +93,15 @@ export default {
 }
 
 .container {
-    width: 60vw;
+    width: 55vw;
 }
 
 @media only screen and (max-width: 565px) {
     .container {
         width: auto;
     }
-    #main{
+
+    #main {
         width: 100vw;
     }
 }

@@ -21,12 +21,25 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1f57ee-b74d-46da-9e23-f753f163391c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App/Layout/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/Layout/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App/Layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/Layout/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App/Layout/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/Layout/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App/Service/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/Service/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/App/Service/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/Service/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App/pages/Admin/VideoPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/pages/Admin/VideoPanel.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/App/pages/Home/view.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/pages/Home/view.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/App/pages/Video/Display.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App/pages/Video/Display.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +199,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -214,7 +233,7 @@
       <workItem from="1601890665504" duration="612000" />
       <workItem from="1602616260766" duration="614000" />
       <workItem from="1602679075262" duration="12000" />
-      <workItem from="1602691916244" duration="2452000" />
+      <workItem from="1602691916244" duration="9331000" />
     </task>
     <servers />
   </component>
@@ -282,5 +301,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1601661528803" />
+    <state x="685" y="454" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602694930265">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="685" y="454" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1602694930265" />
   </component>
 </project>

@@ -57,7 +57,7 @@ const Router = new VueRouter({
         {
             path: '/login',
             component: ()=>import('../Layout/login')
-        },
+        }
     ]
 })
 

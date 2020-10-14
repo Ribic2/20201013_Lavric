@@ -46,12 +46,13 @@
 
                             <v-alert
                                 v-if="error"
-                                class="mt-3"
+                                class="mt-3 white--text"
                                 color="error"
                             >
-                                test
+                                {{ error }}
                             </v-alert>
                         </v-form>
+
                     </v-responsive>
                 </v-card>
             </v-col>
@@ -69,7 +70,6 @@ export default {
             username: '',
             password: '',
             showPassword: false,
-
             // Response
             error: '',
         }
@@ -79,11 +79,11 @@ export default {
             api.login(this.username, this.password)
             .then((response)=>{
                 localStorage.setItem('authToken', response.data.token)
-                axios.defaults.headers.common["Authorization"] = `Bearer `+ response.data.token
+                axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`
                 this.$router.push('/admin')
             })
             .catch((err)=>{
-                console.log(err.response)
+
             })
         }
     }

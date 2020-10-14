@@ -1,10 +1,11 @@
 <template>
-    <v-row>
+    <v-row no-gutters class="mt-4">
         <v-overlay :value="spinner">
             <v-progress-circular indeterminate size="64"></v-progress-circular>
         </v-overlay>
 
         <v-col
+            class="pa-2"
             cols="12"
             sm="12"
             lg="6"
@@ -20,7 +21,7 @@
                 :rounded="false"
                 :elevation="0"
             >
-                <v-responsive :aspect-ratio="1/1">
+                <v-responsive :aspect-ratio="6/4">
                     <v-card-text
                     class="text-center white--text"
                     >
@@ -28,7 +29,7 @@
                             absolute
                             v-if="video.id == selected"
                         >
-                            <h2 class="pa-1">{{ video.videoTitle }}</h2>
+                            <h2 class="pa-5">{{ video.videoTitle }}</h2>
                         </v-overlay>
                     </v-card-text>
                 </v-responsive>
