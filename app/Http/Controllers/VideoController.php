@@ -55,7 +55,7 @@ class VideoController extends Controller
                 ['orderSequence', '>=', $newIndex],
                 ['id', '!=', $replacerId->id]
             ])->orderBy('orderSequence', 'asc')->get();
-            
+
             for ($i = 0; $i < count($Videos); $i++) {
                 Video::where('id', $Videos[$i]->id)->update(['orderSequence' => $Videos[0]->orderSequence + $i]);
             }

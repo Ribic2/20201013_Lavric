@@ -28,7 +28,7 @@
                             absolute
                             v-if="video.id == selected"
                         >
-                            <h2>{{ video.videoTitle }}</h2>
+                            <h2 class="pa-1">{{ video.videoTitle }}</h2>
                         </v-overlay>
                     </v-card-text>
                 </v-responsive>

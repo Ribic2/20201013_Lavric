@@ -5,6 +5,8 @@ import api from '../Service/Api'
 Vue.use(VueRouter)
 
 const Router = new VueRouter({
+
+
     mode: 'history',
     routes:[
         {
@@ -55,7 +57,7 @@ const Router = new VueRouter({
         {
             path: '/login',
             component: ()=>import('../Layout/login')
-        }
+        },
     ]
 })
 

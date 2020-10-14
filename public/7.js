@@ -191,7 +191,9 @@ var render = function() {
                       [
                         video.id == _vm.selected
                           ? _c("v-overlay", { attrs: { absolute: "" } }, [
-                              _c("h2", [_vm._v(_vm._s(video.videoTitle))])
+                              _c("h2", { staticClass: "pa-1" }, [
+                                _vm._v(_vm._s(video.videoTitle))
+                              ])
                             ])
                           : _vm._e()
                       ],
