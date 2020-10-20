@@ -49,7 +49,7 @@
                     background-color="white"
                     v-else>
                     <v-btn
-                        active-class="test"
+                        active-class="activeButton"
                         v-for="button in buttons"
                         :key="button.id"
                         :to="button.link"
@@ -107,11 +107,11 @@ export default {
     cursor: pointer;
 }
 .container {
-    width: 55vw;
+    width: 55vw !important;
 }
 
 .v-toolbar__content{
-    padding: 0px;
+    padding: 0px !important;
 }
 
 .Cookie__button {
@@ -119,14 +119,14 @@ export default {
     color: black !important;
 }
 
-.test {
-    font-weight: 600;
+.activeButton {
+    font-weight: 600 !important;
     background-color: transparent !important;
 }
 
 @media only screen and (max-width: 565px) {
     .container {
-        width: auto;
+        width: auto !important;
     }
 
     #main {
