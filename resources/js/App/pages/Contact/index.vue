@@ -1,5 +1,5 @@
 <template>
-    <v-row>
+    <v-row class="mt-4">
         <v-col
         cols="12"
         >
@@ -10,6 +10,25 @@
             <br>
             <h2>Email</h2>
             <p>nik.lavric@gmail.com</p>
+        </v-col>
+        <v-col
+        cols="12"
+        >
+            <v-btn-toggle
+                group
+            >
+                <v-btn
+                    href="https://www.facebook.com/niklavric"
+                >
+                    <v-icon>mdi-facebook</v-icon>
+                </v-btn>
+
+                <v-btn
+                    href="https://www.instagram.com/niklavric/"
+                >
+                    <v-icon>mdi-instagram</v-icon>
+                </v-btn>
+            </v-btn-toggle>
         </v-col>
     </v-row>
 </template>

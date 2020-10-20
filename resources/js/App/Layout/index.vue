@@ -49,6 +49,7 @@
                     background-color="white"
                     v-else>
                     <v-btn
+                        active-class="test"
                         v-for="button in buttons"
                         :key="button.id"
                         :to="button.link"
@@ -116,6 +117,11 @@ export default {
 .Cookie__button {
     background: white !important;
     color: black !important;
+}
+
+.test {
+    font-weight: 600;
+    background-color: transparent !important;
 }
 
 @media only screen and (max-width: 565px) {

@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row>
-            <h3 class="pt-1 pb-1">{{ video.videoTitle }}</h3>
+            <h3 class="pt-1 pb-3">{{ video.videoTitle }}</h3>
         </v-row>
 
         <v-row>
