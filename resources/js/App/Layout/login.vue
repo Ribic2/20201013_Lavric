@@ -52,7 +52,6 @@
                                 {{ error }}
                             </v-alert>
                         </v-form>
-
                     </v-responsive>
                 </v-card>
             </v-col>
@@ -62,6 +61,7 @@
 
 <script>
 import api from '../Service/Api.js'
+import Axios from "axios";
 
 export default {
     name: "login.vue",
@@ -70,21 +70,14 @@ export default {
             username: '',
             password: '',
             showPassword: false,
+            loading: '',
             // Response
             error: '',
         }
     },
     methods:{
         login(){
-            api.login(this.username, this.password)
-            .then((response)=>{
-                localStorage.setItem('authToken', response.data.token)
-                axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`
-                this.$router.push('/admin')
-            })
-            .catch((err)=>{
-
-            })
+           this.$store.dispatch('login',  {username: this.username, password: this.password})
         }
     }
 }

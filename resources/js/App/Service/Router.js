@@ -5,8 +5,6 @@ import api from '../Service/Api'
 Vue.use(VueRouter)
 
 const Router = new VueRouter({
-
-
     mode: 'history',
     routes:[
         {
@@ -43,14 +41,12 @@ const Router = new VueRouter({
             beforeEnter: ((to, from, next)=>{
                 api.checkUser()
                     .then((response)=>{
-                        console.log(response.data)
                         if(response.data.valid){
                             next()
                         }
                         else{
                             next('/')
                         }
-
                     })
             })
         },

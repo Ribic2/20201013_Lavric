@@ -6,7 +6,19 @@
 
         <v-row>
             <v-responsive :aspect-ratio="16/9">
-                <iframe :src="video.videoLink" frameborder="0" style="overflow:hidden;height:100%;width:100%" id="frame"></iframe>
+                <!--<iframe
+                    :src="video.videoLink"
+                    frameborder="0"
+                    allowfullscreen
+                    style="overflow:hidden;height:100%;width:100%"
+                    id="frame">
+
+                </iframe>-->
+                <object
+                :data="video.videoLink"
+                height="100%"
+                width="100%"
+                ></object>
             </v-responsive>
         </v-row>
 
@@ -22,7 +34,7 @@
 
 <script>
 import api from '../../Service/Api'
-import Router from "../../Service/Router";
+
 export default {
     name: "Display.vue",
     data(){
@@ -53,6 +65,10 @@ export default {
     mounted() {
         this.getVideo()
     },
+
+}
+
+window.onbeforeunload = function (e) {
 
 }
 </script>

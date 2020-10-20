@@ -10,6 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Service_Api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Service/Api.js */ "./resources/js/App/Service/Api.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -71,7 +73,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "login.vue",
@@ -80,20 +82,17 @@ __webpack_require__.r(__webpack_exports__);
       username: '',
       password: '',
       showPassword: false,
+      loading: '',
       // Response
       error: ''
     };
   },
   methods: {
     login: function login() {
-      var _this = this;
-
-      _Service_Api_js__WEBPACK_IMPORTED_MODULE_0__["default"].login(this.username, this.password).then(function (response) {
-        localStorage.setItem('authToken', response.data.token);
-        axios.defaults.headers.common["Authorization"] = "Bearer ".concat(response.data.token);
-
-        _this.$router.push('/admin');
-      })["catch"](function (err) {});
+      this.$store.dispatch('login', {
+        username: this.username,
+        password: this.password
+      });
     }
   }
 });

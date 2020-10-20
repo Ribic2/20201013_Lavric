@@ -1,17 +1,18 @@
 <template>
-    <v-row no-gutters class="mt-4">
+    <v-row class="mt-4">
         <v-overlay :value="spinner">
             <v-progress-circular indeterminate size="64"></v-progress-circular>
         </v-overlay>
 
         <v-col
-            class="pa-2"
             cols="12"
             sm="12"
             lg="6"
             md="6"
             xl="4"
             v-for="video in videos" :key="video.id">
+
+            <v-spacer></v-spacer>
             <v-card
                 class="rounded-0"
                 @mouseover="displayText(video.id)"
@@ -29,7 +30,7 @@
                             absolute
                             v-if="video.id == selected"
                         >
-                            <h2 class="pa-5">{{ video.videoTitle }}</h2>
+                            <h2 class="pa-6">{{ video.videoTitle }}</h2>
                         </v-overlay>
                     </v-card-text>
                 </v-responsive>

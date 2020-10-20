@@ -32,6 +32,7 @@
             >
                 <v-toolbar-title
                     @click="redirect()"
+                    class="pa-0"
                 >
                     <span id="title" class="font-weight-bold">NIK LAVRIČ</span> editor colorist
                 </v-toolbar-title>
@@ -57,18 +58,26 @@
                 </v-btn-toggle>
 
             </v-app-bar>
-            <hr>
+            <hr class="grey">
 
             <v-main id="main">
                 <router-view></router-view>
             </v-main>
         </v-container>
+
+
+        <cookie-law theme="dark-lime"></cookie-law>
     </v-app>
 </template>
 
 <script>
+import CookieLaw from 'vue-cookie-law'
+
 export default {
     name: "index.vue",
+    components: {
+        CookieLaw
+    },
     data() {
         return {
             drawer: false,
@@ -87,13 +96,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 * {
     font-family: 'Open Sans', sans-serif;
 }
 
+#title:hover
+{
+    cursor: pointer;
+}
 .container {
     width: 55vw;
+}
+
+.v-toolbar__content{
+    padding: 0px;
+}
+
+.Cookie__button {
+    background: white !important;
+    color: black !important;
 }
 
 @media only screen and (max-width: 565px) {

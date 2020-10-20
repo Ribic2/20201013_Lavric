@@ -1,9 +1,14 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    headers: {
+})
+
+// Creates instance that sets auth token before request is being sent
+instance.interceptors.request.use(async config =>{
+    config.headers = {
         'Authorization': `Bearer ${localStorage.getItem('authToken')}`
     }
+    return config;
 })
 
 export default {
@@ -52,16 +57,16 @@ export default {
      * @param {string} password
      * @returns {Promise<AxiosResponse<any>>}
      */
-    login(username, password){
-        return instance.post('/api/user/login', {username: username, password: password})
+    login(credentials){
+        return instance.post('/api/user/login', credentials)
     },
 
     /**
      * Checks user
      * @returns {Promise<AxiosResponse<any>>}
      */
-    checkUser(){
-        return instance.post('/api/user/check')
+    checkUser(config){
+        return instance.post('/api/user/check', {}, config)
     },
 
     /**
