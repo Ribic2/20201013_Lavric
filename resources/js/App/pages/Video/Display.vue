@@ -6,19 +6,13 @@
 
         <v-row>
             <v-responsive :aspect-ratio="16/9">
-                <!--<iframe
+                <iframe
                     :src="video.videoLink"
                     frameborder="0"
                     allowfullscreen
                     style="overflow:hidden;height:100%;width:100%"
                     id="frame">
-
-                </iframe>-->
-                <object
-                :data="video.videoLink"
-                height="100%"
-                width="100%"
-                ></object>
+                </iframe>
             </v-responsive>
         </v-row>
 
@@ -68,9 +62,6 @@ export default {
 
 }
 
-window.onbeforeunload = function (e) {
-
-}
 </script>
 
 <style scoped>
